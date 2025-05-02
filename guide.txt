@@ -1,0 +1,51 @@
+its python script and to avoid ban we should run it using ws-proxy
+
+---------------------------ws-proxy-installation--------------------
+
+download it inside machine or using free server service like : https://railway.com/ :via github account
+
+
+inside vps machine : 
+
+git clone https://github.com/Fiujol/proxy            : also i have it with .zip format 
+
+
+unzip it
+
+cd proxy
+
+npm install
+
+npm i -g pm2
+
+pm2 start index.js --name="proxy"
+
+then the public url it should like that : wss://VPS_PUBLIC_IP:5999/ ( to incluce it inside dataset file)
+
+----> to test it it really run then : http://VPS_PUBLIC_IP:5999/----->> wsProxy running...
+
+
+---------------------------------------------------------------------------------------------------------
+config files are : dataset.txt (minox)  and data.txt (pepew)
+
+for minox it should be something like that exactly : 
+
+proxy=wss://web-production-3104a.up.railway.app/bWlub3RhdXJ4Lm5hLm1pbmUuenBvb2wuY2E6NzAxOQ==
+host=127.0.0.1
+port=3006
+username=RNjJNDLa4A7A2vvwhZCnP6d8n2Jfgn8Kvw
+password=c=RVN
+threads=8
+
+for pepew it should be something like that exactly :
+
+
+proxy=wss://web-production-3104a.up.railway.app/eGVsaXN2Mi1wZXBldy5uYS5taW5lLnpwb29sLmNhOjQ4MzM=
+host=127.0.0.1
+port=3306
+username=RNjJNDLa4A7A2vvwhZCnP6d8n2Jfgn8Kvw
+password=c=RVN
+threads=8
+-------------------------------
+
+final step --> to run it : bash start.sh 8
